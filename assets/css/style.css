@@ -24,8 +24,19 @@ body {
     padding-bottom: 2rem;
     border-bottom: 2px solid rgb(220, 200, 180);
 }
-
+@keyframes fadeOut {
+    0% { opacity: 1; } 
+    100% { opacity: 0; }
+}
+body {
+    animation-name: fadeOut;
+    animation-duration: 2s;
+}
 div {
+    transition-property: transform;
+    transition-duration: 3s;
+}
+body {
     transition-property: transform;
     transition-duration: 3s;
 }

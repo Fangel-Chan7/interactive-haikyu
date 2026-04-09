@@ -15,7 +15,7 @@ function randomize() {
 
 
         if (Math.random() > .5) {
-            scale = 1; // don't affect scale
+            scale = 1;
             translateX = randomNumber(0, 80);
             translateY = randomNumber(0, 80);
         }
