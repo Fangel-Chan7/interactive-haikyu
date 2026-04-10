@@ -9,15 +9,27 @@
         <div>Plants</div>
         <div>of</div>
         <div class="last">different</div>
+
         <div>colors</div>
         <div>grow</div>
         <div>and</div>
         <div>we</div>
         <div class="last">see</div>
+        
         <div>delicate</div>
         <div>flowers</div>
         <div class="last">sway</div>
     </div>
-    <script scr="assets/css/js/main.js"></script>
+    <script scr="assets/css/js/main.js">
+        function randomNumber(min, max) {
+			return Math.floor(Math.random() * (max - min + 1)) + min;
+		}
+
+		let rotation = 0;
+		document.addEventListener("click", function () {
+			rotation += randomNumber(1, 200);
+			document.body.style.transform = `rotate(${rotation}deg)`;
+		});
+    </script>
 </body>
 </html>

@@ -29,8 +29,9 @@ body {
     100% { opacity: 0; }
 }
 body {
-    animation-name: fadeOut;
     animation-duration: 2s;
+    animation-direction: alternate;
+	animation-iteration-count: infinite;
 }
 div {
     transition-property: transform;

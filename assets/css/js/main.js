@@ -24,3 +24,5 @@ function randomize() {
     });
 }
 document.addEventListener("click", randomize);
+document.body.style.opacity = .5;
+document.body.style.transform = 'rotate(${rotation}90deg)';
