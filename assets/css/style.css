@@ -13,6 +13,8 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    transition-property: transform;
+    transition-duration: 3s;
 }
 .grid-container {
     display: grid;
@@ -24,10 +26,24 @@ body {
     padding-bottom: 2rem;
     border-bottom: 2px solid rgb(220, 200, 180);
 }
-@keyframes fadeOut {
-    0% { opacity: 1; } 
-    100% { opacity: 0; }
+@keyframes rotateAndScatter {
+  0% { transform: rotate(0deg) scale(1); opacity: 1; }
+  50% { transform: rotate(180deg) scale(1.5); opacity: 0.5; }
+  100% { transform: rotate(360deg) scale(1); opacity: 1; }
 }
+.scatter-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.word {
+  position: absolute;
+  animation: rotateAndScatter 5s infinite;
+}
+.one { top: 10%; left: 20%; }
+.two { top: 50%; left: 70%; }
+.three { top: 80%; left: 30%; }
 body {
     animation-duration: 2s;
     animation-direction: alternate;
@@ -40,4 +56,7 @@ div {
 body {
     transition-property: transform;
     transition-duration: 3s;
+}
+.rotate {
+    transform: rotate(360deg); transition: transform 0.5s;
 }

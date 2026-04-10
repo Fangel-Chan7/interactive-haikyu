@@ -1,6 +1,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>interactive haiku</title>
         <link rel="stylesheet" href="./assets/css/style.css">
     </head>
@@ -27,9 +28,11 @@
 
 		let rotation = 0;
 		document.addEventListener("click", function () {
+            let min = 10;
+            let max = 40;
 			rotation += randomNumber(1, 200);
 			document.body.style.transform = `rotate(${rotation}deg)`;
-		});
+		})
     </script>
 </body>
 </html>
